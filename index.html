@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIVALS BATTLE - 全球R幣傳奇爭霸賽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-bg': '#070f14',
+                        'cyber-card': '#0c171e',
+                        'cyber-card-border': '#152b36',
+                        'cyber-teal': '#1cebc6',
+                        'cyber-teal-dim': '#0f3a35',
+                        'cyber-red-bg': '#331310',
+                        'cyber-red-border': '#63201a',
+                        'cyber-orange': '#e55a30',
+                        'cyber-text-dim': '#607987',
+                        'cyber-text-light': '#9cb2c0',
+                    },
+                    fontFamily: {
+                        'chakra': ['"Chakra Petch"', 'sans-serif'],
+                        'noto': ['"Noto Sans TC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #070f14;
+            color: #ffffff;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(28, 235, 198, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 60%, rgba(229, 90, 48, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+        .font-chakra {
+            font-family: 'Chakra Petch', sans-serif;
+        }
+        .glow-teal {
+            text-shadow: 0 0 12px rgba(28, 235, 198, 0.4);
+        }
+        .bracket-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .bracket-scroll::-webkit-scrollbar-track {
+            background: #070f14;
+        }
+        .bracket-scroll::-webkit-scrollbar-thumb {
+            background: #152b36;
+            border-radius: 3px;
+        }
+        .bracket-scroll::-webkit-scrollbar-thumb:hover {
+            background: #1cebc6;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8 px-4 flex justify-center items-center">
+
+    <div class="w-full max-w-5xl mx-auto space-y-8 pb-12">
+        
+        <!-- Header 區塊 -->
+        <header class="flex justify-between items-center text-xs tracking-wider border-b border-cyber-card-border pb-4">
+            <div class="flex items-center space-x-2 font-chakra font-bold text-cyber-teal">
+                <span class="inline-block w-2.5 h-2.5 bg-cyber-teal transform rotate-45"></span>
+                <span>RB // WORLD SERIES</span>
+            </div>
+            <div class="bg-cyber-red-bg border border-cyber-red-border text-cyber-orange text-[10px] font-chakra px-2 py-1 uppercase tracking-widest font-bold rounded-sm">
+                AUG 15 • LIVE EVENT
+            </div>
+        </header>
+
+        <!-- 主標題區塊 -->
+        <section class="space-y-2">
+            <div class="text-xs font-chakra font-bold text-cyber-text-dim tracking-widest uppercase">
+                GLOBAL COMPETITIVE EVENT
+            </div>
+            <h2 class="text-xl md:text-2xl font-bold tracking-wide text-white">
+                全球R幣傳奇爭霸賽
+            </h2>
+            <h1 class="text-4xl md:text-5xl font-chakra font-bold text-cyber-teal tracking-wider glow-teal uppercase">
+                RIVALS BATTLE
+            </h1>
+            <p class="text-sm text-cyber-text-light pt-2 leading-relaxed">
+                準備迎接真正的對決。用實力、戰術與團隊默契，爭奪傳奇之名。
+            </p>
+        </section>
+
+        <!-- 賽事資訊卡片 -->
+        <section class="grid grid-cols-2 gap-3">
+            <!-- 日期 -->
+            <div class="bg-cyber-card border border-cyber-card-border p-3.5 rounded-sm flex items-start space-x-3">
+                <div class="text-cyber-teal mt-0.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <div class="text-[11px] text-cyber-text-dim font-bold">比賽日期</div>
+                    <div class="text-base font-bold text-white tracking-wide mt-0.5">8 月 15 日</div>
+                </div>
+            </div>
+
+            <!-- 模式 -->
+            <div class="bg-cyber-card border border-cyber-card-border p-3.5 rounded-sm flex items-start space-x-3">
+                <div class="text-cyber-orange mt-0.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <div class="text-[11px] text-cyber-text-dim font-bold">比賽模式</div>
+                    <div class="text-xs font-bold text-white tracking-wide mt-0.5 leading-snug">
+                        排位模式 + CL (無課武)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 賽事規則區塊 -->
+        <section class="space-y-3">
+            <div class="flex justify-between items-end">
+                <div>
+                    <div class="text-[10px] font-chakra font-bold text-cyber-text-dim tracking-widest uppercase">
+                        CODE OF BATTLE
+                    </div>
+                    <h3 class="text-lg font-bold text-white">賽事規則</h3>
+                </div>
+                <div class="text-cyber-orange">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <div class="bg-cyber-card border border-cyber-card-border px-4 py-3 rounded-sm flex items-center space-x-3">
+                    <span class="text-xs font-chakra font-bold text-cyber-teal">01</span>
+                    <span class="text-sm text-cyber-text-light font-medium">禁開自瞄 / 自射</span>
+                </div>
+                <div class="bg-cyber-card border border-cyber-card-border px-4 py-3 rounded-sm flex items-center space-x-3">
+                    <span class="text-xs font-chakra font-bold text-cyber-teal">02</span>
+                    <span class="text-sm text-cyber-text-light font-medium">禁止開掛</span>
+                </div>
+                <div class="bg-cyber-card border border-cyber-card-border px-4 py-3 rounded-sm flex items-center space-x-3">
+                    <span class="text-xs font-chakra font-bold text-cyber-teal">03</span>
+                    <span class="text-sm text-cyber-text-light font-medium">所有場次均為 CL (無課武)</span>
+                </div>
+                <div class="bg-cyber-card border border-cyber-card-border px-4 py-3 rounded-sm flex items-center space-x-3">
+                    <span class="text-xs font-chakra font-bold text-cyber-teal">04</span>
+                    <span class="text-sm text-cyber-text-light font-medium">必須聽從主辦方 / 評判指示</span>
+                </div>
+                <div class="bg-cyber-card border border-cyber-card-border px-4 py-3 rounded-sm flex items-center space-x-3">
+                    <span class="text-xs font-chakra font-bold text-cyber-teal">05</span>
+                    <span class="text-sm text-cyber-text-light font-medium">不可鞭屍</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 18強 → 9強賽程樹狀圖 -->
+        <section class="space-y-3">
+            <div class="flex justify-between items-end">
+                <div>
+                    <div class="text-[10px] font-chakra font-bold text-cyber-text-dim tracking-widest uppercase">
+                        TOURNAMENT BRACKET
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <h3 class="text-lg font-bold text-white">18強 → 9強 賽程樹狀圖</h3>
+                        <span class="text-[10px] bg-cyber-teal/20 text-cyber-teal px-2 py-0.5 rounded font-chakra font-bold">9-TEAM DRAW</span>
+                    </div>
+                </div>
+                <div class="text-cyber-text-dim text-xs font-chakra">
+                    ← 左右滑動查看完整樹狀圖 →
+                </div>
+            </div>
+
+            <!-- 特別說明卡片 -->
+            <div class="bg-cyber-teal/5 border border-cyber-teal/30 p-3 rounded-sm flex items-center space-x-3 text-xs text-cyber-text-light">
+                <span class="bg-cyber-teal text-black font-bold font-chakra px-2 py-0.5 rounded text-[10px]">9強賽制</span>
+                <span>初賽 9 勝者晉級 **9強**。其中 1 隊將透過 **抽籤打兩場（挑戰場）** 爭取準決賽席位！</span>
+            </div>
+
+            <!-- Bracket Scroll Container -->
+            <div class="bg-cyber-card border border-cyber-card-border p-4 rounded-sm overflow-x-auto bracket-scroll">
+                <div class="min-w-[880px] space-y-4">
+                    
+                    <!-- Round Header Labels -->
+                    <div class="grid grid-cols-4 gap-4 text-xs font-chakra font-bold text-cyber-text-dim border-b border-cyber-card-border pb-2 uppercase tracking-wider text-center">
+                        <div class="text-left pl-2">首輪 (18強/9對)</div>
+                        <div>第二輪 (9強對局)</div>
+                        <div>四強賽 (Semi-Final)</div>
+                        <div>總決賽 (Grand Final)</div>
+                    </div>
+
+                    <!-- Tree Container Grid -->
+                    <div class="grid grid-cols-4 gap-6 items-center pt-2 relative">
+
+                        <!-- COLUMN 1: FIRST ROUND (18 TEAMS / 9 MATCHES) -->
+                        <div class="space-y-2.5">
+                            
+                            <!-- Match 1 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-cyber-teal">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 01</span>
+                                    <span class="text-cyber-teal font-bold">5:00 PM</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">主辦特別隊</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">奶貓隊</div>
+                                </div>
+                            </div>
+
+                            <!-- Match 2 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-cyber-teal">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 02</span>
+                                    <span class="text-cyber-teal font-bold">5:00 PM</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">我們，飄向北方吧</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">對不隊</div>
+                                </div>
+                            </div>
+
+                            <!-- Match 3 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-cyber-teal">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 03</span>
+                                    <span class="text-cyber-teal font-bold">5:00 PM</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">貓貓隊</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">ryder隊</div>
+                                </div>
+                            </div>
+
+                            <!-- Match 4 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-cyber-teal">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 04</span>
+                                    <span class="text-cyber-teal font-bold">5:00 PM</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">輸一輸</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">Naminiu隊</div>
+                                </div>
+                            </div>
+
+                            <!-- Match 5 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-cyber-teal">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 05</span>
+                                    <span class="text-cyber-teal font-bold">5:00 PM</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">狙擊Naminiu隊</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">YT特別隊</div>
+                                </div>
+                            </div>
+
+                            <!-- Match 6 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-cyber-teal">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 06</span>
+                                    <span class="text-cyber-teal font-bold">5:00 PM</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">小丑隊</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">Sakura</div>
+                                </div>
+                            </div>
+
+                            <!-- Match 7 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-cyber-orange">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 07</span>
+                                    <span class="text-cyber-orange font-bold">8:00 PM</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">456 Dream</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">冬天隊</div>
+                                </div>
+                            </div>
+
+                            <!-- Match 8 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-cyber-orange">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 08</span>
+                                    <span class="text-cyber-orange font-bold">8:00 PM</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">老高粉絲團</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">F9戰神</div>
+                                </div>
+                            </div>
+
+                            <!-- Match 9 -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2 rounded-sm transition-all duration-200 hover:border-amber-400">
+                                <div class="flex justify-between text-[9px] font-chakra text-cyber-text-dim mb-1">
+                                    <span>MATCH 09</span>
+                                    <span class="text-amber-400 font-bold">時間待定</span>
+                                </div>
+                                <div class="space-y-1 text-xs">
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">全台最爛隊</div>
+                                    <div class="bg-cyber-card px-2 py-0.5 rounded text-cyber-text-light font-bold truncate">雖然是槍的比賽但我玩刀</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- COLUMN 2: 9-TEAM STAGE -->
+                        <div class="space-y-6">
+                            
+                            <!-- 9強 對局 A -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2.5 rounded-sm space-y-1 text-xs">
+                                <div class="text-[9px] font-chakra text-cyber-text-dim mb-1">9強對局 A</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M1 勝者</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M2 勝者</div>
+                            </div>
+
+                            <!-- 9強 對局 B -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2.5 rounded-sm space-y-1 text-xs">
+                                <div class="text-[9px] font-chakra text-cyber-text-dim mb-1">9強對局 B</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M3 勝者</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M4 勝者</div>
+                            </div>
+
+                            <!-- 9強 對局 C -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2.5 rounded-sm space-y-1 text-xs">
+                                <div class="text-[9px] font-chakra text-cyber-text-dim mb-1">9強對局 C</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M5 勝者</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M6 勝者</div>
+                            </div>
+
+                            <!-- 9強 特別抽籤賽 -->
+                            <div class="border-2 border-dashed border-amber-500/60 bg-amber-500/5 p-2.5 rounded-sm space-y-1 text-xs relative">
+                                <div class="flex justify-between items-center text-[9px] font-chakra text-amber-400 font-bold mb-1">
+                                    <span>抽籤打兩場 (加賽)</span>
+                                    <span class="bg-amber-500/20 px-1 py-0.2 rounded">LUCKY DRAW</span>
+                                </div>
+                                <div class="bg-cyber-card border border-amber-500/30 px-2 py-1 rounded text-amber-300 font-bold">
+                                    🎲 抽籤幸運隊 (連打兩場)
+                                </div>
+                                <div class="text-center text-[9px] text-cyber-text-dim">VS</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M7 勝者</div>
+                            </div>
+
+                            <!-- 9強 對局 D -->
+                            <div class="border border-cyber-card-border bg-[#091217] p-2.5 rounded-sm space-y-1 text-xs">
+                                <div class="text-[9px] font-chakra text-cyber-text-dim mb-1">9強對局 D</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M8 勝者</div>
+                                <div class="bg-cyber-card px-2 py-1 rounded text-cyber-text-dim italic">M9 勝者</div>
+                            </div>
+
+                        </div>
+
+                        <!-- COLUMN 3: SEMI-FINALS -->
+                        <div class="space-y-20">
+                            
+                            <div class="border border-cyber-teal/40 bg-[#091217] p-3 rounded-sm space-y-1.5 text-xs">
+                                <div class="text-[9px] font-chakra text-cyber-teal font-bold mb-1">準決賽 1 (SEMI FINAL)</div>
+                                <div class="bg-cyber-card px-2 py-1.5 rounded text-cyber-text-dim italic">9強對局 A 勝者</div>
+                                <div class="bg-cyber-card px-2 py-1.5 rounded text-cyber-text-dim italic">9強對局 B 勝者</div>
+                            </div>
+
+                            <div class="border border-cyber-teal/40 bg-[#091217] p-3 rounded-sm space-y-1.5 text-xs">
+                                <div class="text-[9px] font-chakra text-cyber-teal font-bold mb-1">準決賽 2 (SEMI FINAL)</div>
+                                <div class="bg-cyber-card px-2 py-1.5 rounded text-cyber-text-dim italic">抽籤加賽線勝者</div>
+                                <div class="bg-cyber-card px-2 py-1.5 rounded text-cyber-text-dim italic">9強對局 C/D 勝者</div>
+                            </div>
+
+                        </div>
+
+                        <!-- COLUMN 4: GRAND FINAL & CHAMPION -->
+                        <div class="space-y-6">
+                            <div class="border-2 border-cyber-teal bg-[#091217] p-4 rounded-sm space-y-2 text-xs shadow-lg shadow-cyber-teal/5">
+                                <div class="flex justify-between items-center text-[10px] font-chakra text-cyber-teal font-bold">
+                                    <span>GRAND FINAL</span>
+                                    <span class="bg-cyber-teal/20 px-1.5 py-0.5 rounded">CHAMPIONSHIP</span>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="bg-cyber-card p-2 rounded text-white font-bold text-center">準決賽 1 勝者</div>
+                                    <div class="text-center text-[10px] text-cyber-text-dim font-bold font-chakra">VS</div>
+                                    <div class="bg-cyber-card p-2 rounded text-white font-bold text-center">準決賽 2 勝者</div>
+                                </div>
+                            </div>
+
+                            <div class="border border-cyber-orange/40 bg-cyber-red-bg/30 p-3 rounded-sm text-center">
+                                <div class="text-[9px] font-chakra font-bold text-cyber-orange tracking-widest uppercase">TROPHY</div>
+                                <div class="text-sm font-bold text-white mt-1">總冠軍 CHAMPION</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 警示區塊 -->
+        <section class="bg-cyber-red-bg border border-cyber-red-border p-4 rounded-sm space-y-1">
+            <h4 class="text-cyber-orange font-bold text-sm tracking-wide">零容忍違規</h4>
+            <p class="text-xs text-cyber-text-light leading-relaxed">
+                如發現任何人違反規則將會直接禁止參與。
+            </p>
+        </section>
+
+        <!-- 頁尾 Footer -->
+        <footer class="flex justify-between items-center text-[10px] font-chakra text-cyber-text-dim pt-4 border-t border-cyber-card-border">
+            <div>RIVALS BATTLE 2026</div>
+            <div class="tracking-widest">PLAY FAIR. BATTLE HARD.</div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
